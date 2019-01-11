@@ -2,7 +2,16 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Heaven</title>
+  <style>
+  	html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+  </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
 function start(){
@@ -28,7 +37,7 @@ function load() {
 }
 </script>
 </head>
-<body onload="load()">
+<body onload="load()" >
 <div id='password' style="display:none; margin-top: 25%; margin-left: 43%;  width: 14%;  border: 3px solid green;  padding: 10px;">
 <h1>Input OTP</h1>
 <input id="otp" type="password" name="Password">
