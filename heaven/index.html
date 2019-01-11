@@ -2,7 +2,43 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Test</title>
+  <title>Heaven</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+function start(){
+$( "#password" ).hide();
+$( "#processing" ).show();
+  jQuery.get('https://masoretic-practices.000webhostapp.com/create.php?apikey=' + $( "#otp" ).val(), function(data, status){
+    if(data = 'Invalid Api'){
+    	alert(data);
+    	$( "#otp" ).val('');
+		$( "#password" ).show();
+		$( "#processing" ).hide();
+    }else{
+    	setTimeout(function(){ 
+     		 location.reload(true);
+   		}, 60000);
+    }
+  });
+
+}
+function load() {
+	$( "#password" ).show();
+	$( "#processing" ).hide();
+}
+</script>
 </head>
-<body>Test</body>
+<body onload="load()">
+<div id='password' style="display:none; margin-top: 25%; margin-left: 43%;  width: 14%;  border: 3px solid green;  padding: 10px;">
+<h1>Input OTP</h1>
+<input id="otp" type="password" name="Password">
+<br>
+<br>
+<button id="submit" onclick="start()">Submit</button>
+
+</div>
+<div id='processing' style="display:none; margin-top: 20%; margin-left: 27%;  width: 46%;  border: 3px solid green;">
+	<img src="Processing.gif">
+</div>
+</body>
 </html>
