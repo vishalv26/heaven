@@ -18,7 +18,7 @@ function start(){
 $( "#password" ).hide();
 $( "#processing" ).show();
   jQuery.get('https://masoretic-practices.000webhostapp.com/create.php?apikey=' + $( "#otp" ).val(), function(data, status){
-    if(data = 'Invalid Api'){
+    if(data == 'Invalid Api'){
     	alert(data);
     	$( "#otp" ).val('');
 		$( "#password" ).show();
