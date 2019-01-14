@@ -25,7 +25,8 @@ $( "#processing" ).show();
 		$( "#processing" ).hide();
     }else{
     	setTimeout(function(){ 
-     		 location.reload(true);
+     		 //location.reload(true);
+		location.href = "https://heaven.vishalvishwakarma.com/heaven/";
    		}, 60000);
     }
   });
@@ -38,6 +39,7 @@ function load() {
 </script>
 </head>
 <body onload="load()" >
+	<a href="https://heaven.vishalvishwakarma.com/heaven/">Go to Heaven</a>
 <div id='password' style="display:none; margin-top: 25%; margin-left: 35%;  width: 30%;  border: 3px solid green;  padding: 10px;">
 <h1>Input OTP</h1>
 <input id="otp" type="password" name="Password">
